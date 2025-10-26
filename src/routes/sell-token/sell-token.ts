@@ -141,6 +141,7 @@ router.post("/sell", async (req: Request, res: Response) => {
             // Convert to raw token amount (remove 6 decimals) for the contract
             // The contract expects raw tokens and will add decimals internally
             finalTokenAmount = tokenAmountWithDecimals / 1_000_000n;
+            finalTokenAmount = finalTokenAmount - 1n;
 
             console.log('Sell instruction calculation:', {
                 solAmount: solAmount.toString(),

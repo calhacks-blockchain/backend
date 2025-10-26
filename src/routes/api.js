@@ -7,8 +7,10 @@ import ohlcvRoutes from './ohlcv.js';
 import currentPriceRoutes from './current-price.js';
 import buyTokenRoutes from './buy-token/buy-token.ts';
 import sellTokenRoutes from './sell-token/sell-token.ts';
+import graduateRoutes from './graduate/route.ts';
 
 
+router.use('/graduate', graduateRoutes);
 router.use('/buy-token', buyTokenRoutes);
 router.use('/sell-token', sellTokenRoutes);
 
